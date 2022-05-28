@@ -97,13 +97,26 @@ main() """
 
 #now if you don't want to annoy the user with de message "not a number... Error... etc..." you can just pass the except and then the code will be 
 # back to the try block and prompts the user again for a number. Notice that still catchs the error, the error message from the system won't appear   
-def main():
+""" def main():
     x = get_int()
     print(f"x is {x}")
 def get_int():
     while True:
         try:
             return int(input("Number? "))
+        except ValueError:
+            pass
+
+main() """
+
+#change the code, making it more reusable, adding a parameter in get_int() and using it in the caller
+def main():
+    x = get_int("What's x? ")
+    print(f"x is {x}")
+def get_int(prompt):
+    while True:
+        try:
+            return int(input(prompt))
         except ValueError:
             pass
 
