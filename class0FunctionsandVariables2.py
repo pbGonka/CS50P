@@ -37,7 +37,7 @@ y = float(input("What's y? ")) """
 
 #print(z)
 
-#You can use round() function to round up the number to the closest integer. round(number[, ndigits])
+#You can use round() function to round up the number to the closest integer. round(number[, ndigits]) los "[]" son usados para informar que es parametro opcional
 
 #format big numbers to make them more readable 
 #(the use of "," and "." it depends on the country and how they use, in the US they use "," to separate the 0 on thousands, millions, etc. and on things like cents, they use the ".")
@@ -45,6 +45,9 @@ y = float(input("What's y? ")) """
 #print(f"{z:,}")  
 
 #rounding the division and choosing how many decimals after the "," (using a division)
+
+""" z= float(9999) + float(1.122)
+print(f"{z:,.2f}") """
 
 """ x = float(input("What's x? "))
 y = float(input("What's y? "))

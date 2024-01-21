@@ -22,7 +22,18 @@
 
 #and to have everything even cleaner and compact:
 
+#name = input("What's your name? ").strip().title()
+
+#haciendo un split en el nombre completo, separando nombre y apellido y guardando en variables distintas para despues imprimir un saludo usando unicamente el nombre sin el apellido
+
 name = input("What's your name? ").strip().title()
+
+nombre, apellido = name.split(" ")  #usamos como marco para realizar el split el espacio en blanco que hay entre el nombre y el apellido y asignamos de izq. a derecha respectivamente la variable
+
+print(name)
+
+print(f"hello, {nombre} 😀")
+
 
 #Say hello to user, and put an happy emoji with it (agarré el emoji de emojipedia.org y solo copiar y pegar)
 
@@ -31,7 +42,7 @@ name = input("What's your name? ").strip().title()
 #la f (format string) indica a python que es un str especial, como pueden ver tiene la variable entre {}
 #y esta encerrado dentro del mismo ""
 
-print(f"hello, {name} 😀")
+#print(f"hello, {name} 😀")
 
 #mirando el doc de python https://docs.python.org/3/library/functions.html, en la funcion
 #print esta definida por: print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)
